@@ -1,0 +1,469 @@
+/* fonts */
+
+@font-face {
+    font-family: "mamaLian-Regular";
+    src: url("/fonts/MamaLian.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "airframe-Bold";
+    src: url("/fonts/AirframeDemoBold.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "airframe-Regular";
+    src: url("/fonts/AirframeDemoRegular.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "LeagueSpartan-Regular";
+    src: url("/fonts/LeagueSpartan-Regular.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "LeagueSpartan-Bold";
+    src: url("/fonts/LeagueSpartan-Bold.ttf")format("truetype");
+}
+
+@font-face {
+    font-family: "opticianSans";
+    src: url("/fonts/Optician-Sans.otf")format("opentype");
+}
+
+i {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "LeagueSpartan-Regular";
+}
+
+.outer {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.slider {
+    position: relative;
+    isolation: isolate;
+    /* Creates a new stacking context */
+    display: flex;
+    width: 600vw;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+.inner {
+    margin: 7em;
+    position: relative;
+    display: flex;
+    height: calc(100% - 14em);
+    z-index: 1;
+}
+
+/* CSS remains the same as before */
+
+.stars-container {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 600vw;
+    /* Set to viewport width */
+    height: 100vh;
+    /* Set to viewport height */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    transform-origin: center;
+}
+
+#inner1 h1 {
+    font-weight: normal;
+    position: absolute;
+    left: 00px;
+    font-family: "mamaLian-Regular";
+    font-size: 180px;
+    text-transform: uppercase;
+}
+
+#inner1 p {
+    width: 480px;
+    position: absolute;
+    bottom: 200px;
+    left: 125px;
+}
+
+#sliderContainer p {
+    color: #fff;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInOut 4s ease-in-out 3s;
+
+}
+
+#sliderContainer {
+    z-index: 9999;
+    position: fixed;
+    bottom: 30px;
+    left: 80%;
+}
+
+#sliderBorder {
+    background-color: rgb(41, 41, 41);
+    width: 180px;
+    height: 5px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+}
+
+#sliderBorder::after {
+    content: "";
+    width: 7%;
+    border-radius: 100px;
+    height: 100%;
+    background-color: #fff;
+    filter: blur(1px);
+}
+
+#sliderBorder::before {
+    position: absolute;
+    left: 5%;
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    filter: blur(1px);
+}
+
+#menu {
+    position: absolute;
+    bottom: -60px;
+    left: -70px;
+    width: 300px;
+    height: 300px;
+    border-radius: 503px;
+    border: 3px solid #E3E3E3;
+    background: radial-gradient(90.72% 91.63% at 68.99% 14.91%, #FFF 0%, #515151 100%);
+    box-shadow: 0px 0px 70px 23px rgba(255, 255, 255, 0.25);
+    filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu>img {
+    width: 140%;
+    height: 140%;
+    animation: rotate 30s infinite linear;
+}
+#menuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menuCyrcle {
+    width: 50px;
+    height: 50px;
+    background-color: #141414;
+    z-index: 2;
+}
+#inner2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#smileyPlanet {
+    position: absolute;
+    bottom: -500px;
+    width: 800px;
+    height: 800px;
+    border-radius: 670.568px;
+    background: #EDEDED;
+    box-shadow: 0px 0px 150px 35px rgba(255, 255, 255, 0.25);
+    filter: blur(3.5px);
+}
+
+.title {
+    position: absolute;
+    font-size: 25px;
+    top: 0px;
+    text-transform: uppercase;
+    font-family: "airframe-Regular";
+    font-weight: normal;
+}
+
+#aboutMeContainer {
+    margin: 100px 50px;
+    height: 100%;
+}
+
+#aboutMeContainer>label p {
+    margin: 10px 0px 30px 15px;
+    color: #B5B5B5;
+    font-size: 20px;
+}
+
+#aboutMeContainer>label>h3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #EDEDED;
+    font-size: 20px;
+}
+
+#aboutMeContainer>label>h3::before {
+    position: absolute;
+    left: -20px;
+    border-radius: 50%;
+    content: "";
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+}
+
+#inner3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.WebProjectslinksContainer>div {
+    margin-bottom: 70px;
+}
+
+.WebProjectslinksContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#WebProjectslinksContainer {
+    width: 500px;
+    height: 500px;
+}
+
+#inner3 a {
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: #212121;
+    padding: 20px;
+    margin: 0px 10px;
+    border: solid 2px #464646;
+    font-size: 30px;
+}
+
+#inner4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner4 h1 {
+    color: #141414;
+    z-index: 999;
+}
+
+#whitePlanet {
+    pointer-events: none;
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    background-image: url('/media/planet.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: rotate 120s infinite linear reverse;
+}
+
+#whitePlanetLine {
+    pointer-events: none;
+    position: absolute;
+    width: 1150px;
+    height: 1150px;
+    background-image: url('/media/planetLine.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: rotate 90s infinite linear;
+}
+
+@keyframes rotate {
+    0% {}
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        padding-left: 0px;
+    }
+
+    30% {
+        padding-left: 10px;
+    }
+
+    60% {
+        padding-left: 0px;
+    }
+
+    75% {
+        padding-left: 10px;
+    }
+
+    100% {
+        padding-left: 0px;
+    }
+}
+
+#cardsContainer {
+    grid-gap: 20px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    font-family: "opticianSans";
+    width: 230px;
+    height: 100px;
+    background-color: #F0F0F0;
+    border: 2px solid #A8A8A8;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #141414;
+    background-repeat: no-repeat;
+    transition: background 2s ease-in-out;
+    z-index: 2;
+}
+
+.card-date {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card h1 {
+    z-index: 2;
+}
+
+.cardImage {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    object-fit: cover;
+    width: 150%;
+}
+
+.card:hover {
+    background-image: url(/media/giantpuzzlebg.png);
+    background-size: cover;
+    background-color: transparent;
+    /* Make the background color transparent on hover */
+}
+
+#inner5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tnxPlanet {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background-image: url(/media/thankyouplanet.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#tnxPlanetLine {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background-image: url(/media/thankyouplanetLine.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    animation: rotate 40s linear infinite;
+}
+
+#tnxContainer {
+    text-transform: uppercase;
+    color: #141414;
+    text-align: center;
+    width: 550px;
+    height: 550px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#tnxContainer p {
+    font-size: 20px;
+}
+
+#tnxContainer a {
+    color: #141414;
+}
+
+#tnxSocial {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
