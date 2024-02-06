@@ -62,6 +62,7 @@ function updateStars() {
         });
     });
 }
+scrollingTimer = 0
 window.addEventListener('scroll', function() {
     // Clear the previous timer
     clearTimeout(scrollingTimer);
@@ -84,3 +85,16 @@ function startHoldTimer() {
         
     }, 3000); // Adjust the duration (in milliseconds) as needed
   }
+
+
+
+  let pageWidth = document.documentElement.scrollWidth;
+  let vpw = document.documentElement.clientWidth
+
+console.log(pageWidth)
+window.onscroll = function () {
+    let indicatorFiller = document.getElementById('indicatorFiller');
+    let persnetageScrolled = (scrollY / pageWidth) * 100 / 6 + 10;
+    console.log(persnetageScrolled);
+    indicatorFiller.style.width = persnetageScrolled - 5  + '%';
+}

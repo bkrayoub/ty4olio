@@ -50,8 +50,57 @@ body {
     background-color: #141414;
     color: #fff;
     height: 100vh;
-    overflow: hisdden;
+    overflow: hidden;
     font-family: "LeagueSpartan-Regular";
+}
+
+#welcome {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#welcome h2 {
+    margin: 0px;
+    font-family: "mamaLian-Regular";
+    font-weight: lighter;
+    font-size: 300px;
+}
+
+#welcome span {
+    position: absolute;
+    bottom: 50px;
+    filter: blur(.5px);
+    rotate: -90deg;
+    font-size: 30px;
+}
+
+#ty4circleContainer {
+    position: absolute;
+    width: 400px;
+    top: 40px;
+    mix-blend-mode: difference;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ty4circle {
+    width: 100%;
+    height: 100%;
+    animation: rotate  60s linear infinite;
+}
+#ty4circleLogo {
+    position: absolute;
+    width: 20%;
+    z-index: 999;
+}
+#ty4circleLine {
+    position: absolute;
+    width: 105%;
+    z-index: 999;
+    animation: rotate  160s linear infinite reverse;
 }
 
 .outer {
@@ -116,7 +165,7 @@ section {
     left: 125px;
 }
 
-#sliderContainer p {
+#indicatorContainer p {
     color: #fff;
     transition: 1s;
     display: flex;
@@ -126,14 +175,14 @@ section {
 
 }
 
-#sliderContainer {
+#indicatorContainer {
     z-index: 9999;
     position: fixed;
     bottom: 30px;
     left: 80%;
 }
 
-#sliderBorder {
+#indicator {
     background-color: rgb(41, 41, 41);
     width: 180px;
     height: 5px;
@@ -143,18 +192,20 @@ section {
     margin: 5px 0px;
 }
 
-#sliderBorder::after {
-    content: "";
+#indicatorFiller {
     width: 7%;
     border-radius: 100px;
     height: 100%;
     background-color: #fff;
     filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: 0s ease-in-out;
+
 }
 
-#sliderBorder::before {
-    position: absolute;
-    left: 5%;
+#indicatorFiller::before {
     content: "";
     width: 9px;
     height: 9px;
@@ -163,21 +214,58 @@ section {
     filter: blur(1px);
 }
 
+#indicatorFiller::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 120%;
+    border-radius: 100%;
+    filter: blur(1px);
+    width: 30%;
+    animation: fillerFlash linear infinite 2s;
+}
+
+@keyframes fillerFlash {
+    0% {
+        filter: blur(1px);
+        opacity: 0;
+        left: 0%;
+    }
+
+    40% {
+        filter: blur(2px);
+        opacity: 1;
+        left: 25%;
+    }
+
+    60% {
+        filter: blur(2px);
+        opacity: 1;
+        left: 45%;
+    }
+
+    100% {
+        filter: blur(1px);
+        opacity: 0;
+        left: 70%;
+    }
+}
 
 #menuContainer {
     position: absolute;
     bottom: -70px;
     left: -40px;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 #menuCyrcle {
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 35%;
+    height: 35%;
     background-color: #141414;
     border-radius: 50%;
     z-index: 2;
@@ -185,8 +273,10 @@ section {
     justify-content: center;
     align-items: center;
     font-family: "airframe-Regular";
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: lighter;
 }
+
 #menuCyrcle::before {
     content: '';
     position: absolute;
@@ -195,6 +285,7 @@ section {
     border-radius: 50%;
     border: 3px solid rgb(204, 204, 204);
 }
+
 #menu {
     width: 100%;
     height: 100%;
@@ -213,10 +304,12 @@ section {
     height: 140%;
     animation: rotate 30s infinite linear;
 }
+
 #moon {
     position: absolute;
     animation: rotate 30s infinite linear reverse;
 }
+
 #inner2 {
     display: flex;
     flex-direction: column;
@@ -225,17 +318,65 @@ section {
     height: 100%;
 }
 
-#smileyPlanet {
+#smileyPlanetContainer {
     position: absolute;
     bottom: -500px;
     width: 800px;
     height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    animation: smilyPlanetMove infinite 6s ease-out;
+}
+@keyframes smilyPlanetMove {
+    0% {
+        bottom: -500px;
+    }
+    50%{
+        bottom: -490px;
+    }
+    100% {
+        bottom: -500px;
+    }
+}
+#smileyPlanet {
+    width: 100%;
+    height: 100%;
     border-radius: 670.568px;
     background: #EDEDED;
     box-shadow: 0px 0px 150px 35px rgba(255, 255, 255, 0.25);
     filter: blur(3.5px);
 }
 
+#eyes {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.eye {
+    filter: blur(0px);
+    border-radius: 100%;
+    width: 30px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: start;
+}
+.eye::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #212121;
+    border-radius: 100%;
+}
+@keyframes eyeBlink {
+    
+}
 .title {
     position: absolute;
     font-size: 25px;
@@ -330,6 +471,7 @@ section {
     background-repeat: no-repeat;
     background-position: center center;
     animation: rotate 600s infinite linear reverse;
+    mix-blend-mode: difference;
 }
 
 #whitePlanetLine {
@@ -399,6 +541,7 @@ section {
     transition: background 2s ease-in-out;
     z-index: 2;
 }
+
 .card::before {
     content: '';
     left: -15px;
@@ -408,7 +551,7 @@ section {
     height: 30px;
     border-radius: 50%;
     border: 2px dashed #464646;
-    animation: rotate infinite 15s  linear;
+    animation: rotate infinite 15s linear;
 }
 
 .card-date {
@@ -492,6 +635,7 @@ section {
     justify-content: space-evenly;
     align-items: center;
 }
+
 #menuContainer {
     position: fixed;
 }

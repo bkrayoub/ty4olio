@@ -6,34 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 </head>
 
 <body>
-    
-    <div id="menuContainer">
-        <div id="menuCyrcle">MENU</div>
-        <img src="media/moon.png" id="moon">
-        <div id="menu">
-            <img src="media/dashedline.svg">
-        </div>
-    </div>
-    <script src="https://kit.fontawesome.com/beed54dfa5.js" crossorigin="anonymous"></script>
 
+
+    <script src="https://kit.fontawesome.com/beed54dfa5.js" crossorigin="anonymous"></script>
+    <div id="welcome">
+        <h2>WELCOME</h2>
+        <div id="ty4circleContainer">
+            <img src="media/ty4circleLogo.png" id="ty4circleLogo">
+            <img src="media/ty4circle.png" id="ty4circle">
+            <img src="media/ty4circleLine.png" id="ty4circleLine">
+        </div>
+        <span class="material-symbols-outlined">
+            arrow_back_ios_new
+            </span>
+    </div>
     <div class="outer">
-        
-        <div id="sliderContainer">
+
+        <div id="indicatorContainer">
             <p>Scroll or Drag Sideways <span class="material-symbols-outlined">
-                arrow_right_alt
+                    arrow_right_alt
                 </span>
             </p>
-            
-            <div id="sliderBorder"></div>
+
+            <div id="indicator">
+                <div id="indicatorFiller"></div>
+            </div>
         </div>
         <div class="slider">
             <section>
                 <div class="inner" id="inner1">
+                    <div id="menuContainer">
+                        <div id="menuCyrcle">MENU</div>
+                        <img src="media/moon.png" id="moon">
+                        <div id="menu">
+                            <img src="media/dashedline.svg">
+                        </div>
+                    </div>
                     <span>web developer - designer</span>
                     <p>The websites homepage clearly presents information about my skills and the services I offers.
                         If you continue scrolling you will find a contact form for potential clients and links to my
@@ -46,7 +60,13 @@
 
             <section>
                 <div class="inner 2" id="inner2">
-                    <div id="smileyPlanet"></div>
+                    <div id="smileyPlanetContainer">
+                        <div id="smileyPlanet"></div>                 
+                        <div id="eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                    </div>
                     <h1 class="title">about me and my work</h1>
                     <div id="aboutMeContainer">
                         <label for="">
@@ -138,20 +158,21 @@
                     <div id="tnxPlanetLine"></div>
                     <div id="tnxContainer">
                         <img src="media/ty4.svg" alt="">
-                        <h1>Thank you for your visit <3</h1>
-                        <p>Do you like what you see? Please contact us to discuss your project. Or for a cup of coffee. Or just to say hello</p>
-                        <div id="tnxSocial">
-                            <a href="">
-                                <img src="media/insta.svg">
-                            </a>
-                            <a href="">
-                            <img src="media/behance.svg">
-                            </a>
-                            <a href="">
-                                <img src="media/linkedin.svg">
-                            </a>
-                        </div>
-                        <a href="#inner1">return home</a>
+                        <h1>Thank you for your visit <3 </h1>
+                                <p>Do you like what you see? Please contact us to discuss your project. Or for a cup of
+                                    coffee. Or just to say hello</p>
+                                <div id="tnxSocial">
+                                    <a href="">
+                                        <img src="media/insta.svg">
+                                    </a>
+                                    <a href="">
+                                        <img src="media/behance.svg">
+                                    </a>
+                                    <a href="">
+                                        <img src="media/linkedin.svg">
+                                    </a>
+                                </div>
+                                <a href="#inner1">return home</a>
                     </div>
 
 
