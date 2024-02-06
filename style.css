@@ -303,7 +303,7 @@ section {
     position: absolute;
     width: 1000px;
     height: 1000px;
-    background-image: url('/media/planet.svg');
+    background-image: url('media/planet.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -315,7 +315,7 @@ section {
     position: absolute;
     width: 1150px;
     height: 1150px;
-    background-image: url('/media/planetLine.svg');
+    background-image: url('media/planetLine.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -399,7 +399,7 @@ section {
 }
 
 .card:hover {
-    background-image: url(/media/giantpuzzlebg.png);
+    background-image: url("media/giantpuzzlebg.png");
     background-size: cover;
     background-color: transparent;
     /* Make the background color transparent on hover */
@@ -423,7 +423,7 @@ section {
     position: absolute;
     width: 700px;
     height: 700px;
-    background-image: url(/media/thankyouplanet.svg);
+    background-image: url("media/thankyouplanet.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -433,7 +433,7 @@ section {
     position: absolute;
     width: 800px;
     height: 800px;
-    background-image: url(/media/thankyouplanetLine.svg);
+    background-image: url("media/thankyouplanetLine.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
