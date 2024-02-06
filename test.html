@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed black;
+  box-sizing: border-box;
+  animation: rotateBorder 5s linear infinite;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+    top: -2px;
+    left: -2px;
+  }
+  25% {
+    transform: rotate(90deg);
+    top: -2px;
+    left: calc(100% - 2px);
+  }
+  50% {
+    transform: rotate(180deg);
+    top: calc(100% - 2px);
+    left: calc(100% - 2px);
+  }
+  75% {
+    transform: rotate(270deg);
+    top: calc(100% - 2px);
+    left: -2px;
+  }
+  100% {
+    transform: rotate(360deg);
+    top: -2px;
+    left: -2px;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+      </div>
+</body>
+</html>
