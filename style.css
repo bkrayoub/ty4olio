@@ -2,32 +2,32 @@
 
 @font-face {
     font-family: "mamaLian-Regular";
-    src: url("/fonts/MamaLian.ttf")format("truetype");
+    src: url("fonts/MamaLian.ttf")format("truetype");
 }
 
 @font-face {
     font-family: "airframe-Bold";
-    src: url("/fonts/AirframeDemoBold.ttf")format("truetype");
+    src: url("fonts/AirframeDemoBold.ttf")format("truetype");
 }
 
 @font-face {
     font-family: "airframe-Regular";
-    src: url("/fonts/AirframeDemoRegular.ttf")format("truetype");
+    src: url("fonts/AirframeDemoRegular.ttf")format("truetype");
 }
 
 @font-face {
     font-family: "LeagueSpartan-Regular";
-    src: url("/fonts/LeagueSpartan-Regular.ttf")format("truetype");
+    src: url("fonts/LeagueSpartan-Regular.ttf")format("truetype");
 }
 
 @font-face {
     font-family: "LeagueSpartan-Bold";
-    src: url("/fonts/LeagueSpartan-Bold.ttf")format("truetype");
+    src: url("fonts/LeagueSpartan-Bold.ttf")format("truetype");
 }
 
 @font-face {
     font-family: "opticianSans";
-    src: url("/fonts/Optician-Sans.otf")format("opentype");
+    src: url("fonts/Optician-Sans.otf")format("opentype");
 }
 
 i {
